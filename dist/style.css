@@ -509,6 +509,7 @@ ul {
   content: '|';
   padding-left: 5px;
   padding-right: 5px;
+  color: #FFC500;
 }
 
 .profile_info span {
