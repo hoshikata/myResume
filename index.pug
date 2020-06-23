@@ -136,15 +136,15 @@ html(lang="zh")
                         li
                           h6.name 中文
                           .progress(data-level="8")
-                            .bar.size-8
+                            .bar
                         li
                           h6.name 英文
                           .progress(data-level="4")
-                            .bar.size-4
+                            .bar
                         li
                           h6.name 日文
                           .progress(data-level="6")
-                            .bar.size-6
+                            .bar
                   .col-8.col-sm-12
                     .soft
                       h4 Soft Skills
@@ -152,26 +152,26 @@ html(lang="zh")
                         li
                           h6.name Photoshop
                           .progress(data-level="80")
-                            .fill.percent-50
-                            .bar.percent-80
+                            .fill
+                            .bar
                             span 80%
                         li
                           h6.name Illustrator
                           .progress(data-level="70")
-                            .fill.percent-50
-                            .bar.percent-70
+                            .fill
+                            .bar
                             span 70%
                         li
                           h6.name Premiere
                           .progress(data-level="45")
-                            .fill.percent-45
-                            .bar.no-display
+                            .fill
+                            .bar
                             span 45%
                         li
                           h6.name VS Code
                           .progress(data-level="40")
-                            .fill.percent-40
-                            .bar.no-display
+                            .fill
+                            .bar
                             span 40%
                   .col-8.col-sm-12.order-2
                     .coding
@@ -180,38 +180,38 @@ html(lang="zh")
                         li
                           h6.name HTML / CSS
                           .progress(data-level="75")
-                            .fill.percent-50
-                            .bar.percent-75
+                            .fill
+                            .bar
                             span 75%
                         li
                           h6.name SASS
                           .progress(data-level="75")
-                            .fill.percent-50
-                            .bar.percent-75
+                            .fill
+                            .bar
                             span 75%
                         li
                           h6.name JavaScript
                           .progress(data-level="55")
-                            .fill.percent-50
-                            .bar.percent-55
+                            .fill
+                            .bar
                             span 55%
                         li
                           h6.name jQuery
                           .progress(data-level="45")
-                            .fill.percent-45
-                            .bar.no-display
+                            .fill
+                            .bar
                             span 45%
                         li
                           h6.name Bootstrap
                           .progress(data-level="45")
-                            .fill.percent-45
-                            .bar.no-display
+                            .fill
+                            .bar
                             span 45%
                         li
                           h6.name RWD
                           .progress(data-level="55")
-                            .fill.percent-50
-                            .bar.percent-55
+                            .fill
+                            .bar
                             span 55%
                         li
                           h6.name Vue
@@ -227,7 +227,9 @@ html(lang="zh")
                     .project.project1
                       .project_image
                         .img(style="background-image: url('img/freespeech.png')")
-                        a.project_link(href="javascript:;")
+                        .project_link
+                        .imageLarge
+                          img(src="img/freespeech.png")
                       .project_detail
                         h6 Free Speech
                         ul.project_list

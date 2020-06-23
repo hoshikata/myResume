@@ -601,8 +601,11 @@ button {outline: none;}
       background-color: $colorDefault;
       box-shadow: inset 0 0 0 2px $colorDefault;
     }
-    &:hover::after {
-      background-color: $colorPrimary;
+    &:hover {
+      background-color: rgba($colorLightGray, 0.05);
+      &::after {
+        background-color: $colorPrimary;
+      }
     }
   }
   @include breakpoint(md) {
@@ -700,13 +703,17 @@ button {outline: none;}
     position: absolute;
     top: 0;
     left: 0;
+    width: 0;
     height: 100%;
+    transition: width 1s;
     background-color: $colorPrimary;
   }
 }
 @for $i from 1 through 10 {
-  .size-#{$i} {
-    width: $i * 10%;
+  .lang .skill_list .size-#{$i} {
+    .bar {
+      width: $i * 10%;
+    }
   }
 }
 
@@ -739,12 +746,16 @@ button {outline: none;}
   .progress::after, 
   .bar, 
   .fill {
+    z-index: 0;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
-    height: 100%;
+    width: calc(100% - 2px);
+    height: calc(100% - 2px);
+    margin-top: 1px;
+    margin-left: 1px;
     box-sizing: border-box;
+    transition: transform 0.5s linear;
     border-radius: 50%;
     border: 7px solid $colorPrimary;
     clip-path: polygon(50% 0%, 0% 0%, 0% 100%, 50% 100%);
@@ -753,12 +764,24 @@ button {outline: none;}
   .progress::after {
     content: '';
     display: block;
-    border-color: rgba($colorLightGray, 0.2);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-width: 9px;
+    border-color: mix($colorLightGray, $colorDefault, 20%);
   }
-  .progress::before {transform: rotate(180deg);}
-  .progress::after {z-index: 1;}
+  .progress::before, 
+  .bar {
+    clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+  }
+  .progress::after {z-index: 1}
   .bar {
     z-index: 2;
+    visibility: hidden;
+    transition: transform 0.5s linear 0.5s;
+    &.visitable {
+      visibility: visible;
+    }
   }
   .progress span {
     position: absolute;
@@ -780,8 +803,17 @@ button {outline: none;}
 }
 $fivePercent: 18deg;
 @for $i from 1 through 20 {
-  .percent-#{$i * 5} {
-    transform: rotate($fivePercent * $i);
+  @if ($i <= 10) {
+    .p#{$i * 5} {
+      .fill {transform: rotate($fivePercent * $i);}
+      .bar {display: none;}
+    }
+  }
+  @if ($i > 10) {
+    .p#{$i * 5} {
+      .fill {transform: rotate($fivePercent * 10);}
+      .bar {transform: rotate($fivePercent * $i - 180deg);}
+    }
   }
 }
 
@@ -815,8 +847,32 @@ $fivePercent: 18deg;
     left: 0;
     width: 100%;
     height: 100%;
+    cursor: pointer;
     &:hover {
       background-color: rgba($colorBlack, 0.1);
+    }
+  }
+  .imageLarge {
+    z-index: 50;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    cursor: pointer;
+    background-color: rgba($colorBlack, 0.8);
+    img {
+      max-width: 50vw;
+      max-height: calc(80vh - 70px);
+      margin-left: 50vw;
+      margin-top: 50vh;
+      cursor: auto;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+    }
+    &.show {
+      display: block;
     }
   }
 }
@@ -857,7 +913,6 @@ $fivePercent: 18deg;
 
 
 //- Useable
-.no-display {display: none;}
 .flex-column {flex-direction: column;}
 .flex-center {justify-content: center;}
 .flex-middle {align-items: center;}

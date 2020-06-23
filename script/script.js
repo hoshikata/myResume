@@ -39,7 +39,7 @@
   navBtn.addEventListener('click', () => {
     navBtn.classList.toggle('navBtn_close');
     nav.classList.toggle('nav_open');
-  })
+  });
 
   // 自傳詳細的按鈕
   const aboutMore = document.querySelector('.profile_more');
@@ -50,6 +50,44 @@
     const preText = aboutBtn.textContent;
     aboutBtn.textContent = aboutBtnText;
     aboutBtnText = preText;
-  }
+  };
   aboutBtn.addEventListener('click', moreBtnHandler);
+
+  // 技能圖動畫
+  const skillTop = document.querySelector('.skills').offsetTop;
+  const circles = document.querySelectorAll('.soft .progress, .coding .progress');
+  const bars = document.querySelectorAll('.lang .progress');
+  const circleAnimate = circle => {
+    const percent = circle.dataset.level;
+    circle.classList.add(`p${percent}`);
+    const fill = circle.querySelector('.fill');
+    const bar = circle.querySelector('.bar');
+    fill.addEventListener('transitionend', (e) => {
+      if (e.propertyName === 'transform') bar.classList.add('visitable');
+    });
+  };
+  const barAnimate = bar => {
+    const percent = bar.dataset.level;
+    bar.classList.add(`size-${percent}`);
+  };
+  const skillAnimateActive = () => {
+    if (window.scrollY + window.innerHeight / 3 > skillTop) {
+      circles.forEach(circleAnimate);
+      bars.forEach(barAnimate);
+    }
+  };
+  window.addEventListener('scroll', skillAnimateActive);
+
+  // 作品集圖片放大
+  const projectImageLink = document.querySelectorAll('div.project_link');
+  const imageLarge = document.querySelectorAll('.imageLarge');
+  const showImageLarge = () => {
+    imageLarge.forEach(imgBlock => {
+      imgBlock.classList.add('show');
+      imgBlock.addEventListener('click', () => {
+        imgBlock.classList.remove('show');
+      });
+    });
+  };
+  projectImageLink.forEach(link => link.addEventListener('click', showImageLarge));
 }

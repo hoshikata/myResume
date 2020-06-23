@@ -1030,6 +1030,11 @@ button {
           box-shadow: inset 0 0 0 2px #111117;
 }
 
+.edu_list > li:hover,
+.exp_list > li:hover {
+  background-color: rgba(220, 220, 220, 0.05);
+}
+
 .edu_list > li:hover::after,
 .exp_list > li:hover::after {
   background-color: #FFC500;
@@ -1157,47 +1162,50 @@ button {
   position: absolute;
   top: 0;
   left: 0;
+  width: 0;
   height: 100%;
+  -webkit-transition: width 1s;
+  transition: width 1s;
   background-color: #FFC500;
 }
 
-.size-1 {
+.lang .skill_list .size-1 .bar {
   width: 10%;
 }
 
-.size-2 {
+.lang .skill_list .size-2 .bar {
   width: 20%;
 }
 
-.size-3 {
+.lang .skill_list .size-3 .bar {
   width: 30%;
 }
 
-.size-4 {
+.lang .skill_list .size-4 .bar {
   width: 40%;
 }
 
-.size-5 {
+.lang .skill_list .size-5 .bar {
   width: 50%;
 }
 
-.size-6 {
+.lang .skill_list .size-6 .bar {
   width: 60%;
 }
 
-.size-7 {
+.lang .skill_list .size-7 .bar {
   width: 70%;
 }
 
-.size-8 {
+.lang .skill_list .size-8 .bar {
   width: 80%;
 }
 
-.size-9 {
+.lang .skill_list .size-9 .bar {
   width: 90%;
 }
 
-.size-10 {
+.lang .skill_list .size-10 .bar {
   width: 100%;
 }
 
@@ -1238,13 +1246,20 @@ button {
 .coding .skill_list .progress::after,
 .coding .skill_list .bar,
 .coding .skill_list .fill {
+  z-index: 0;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  margin-top: 1px;
+  margin-left: 1px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-transition: -webkit-transform 0.5s linear;
+  transition: -webkit-transform 0.5s linear;
+  transition: transform 0.5s linear;
+  transition: transform 0.5s linear, -webkit-transform 0.5s linear;
   border-radius: 50%;
   border: 7px solid #FFC500;
   -webkit-clip-path: polygon(50% 0%, 0% 0%, 0% 100%, 50% 100%);
@@ -1257,13 +1272,19 @@ button {
 .coding .skill_list .progress::after {
   content: '';
   display: block;
-  border-color: rgba(220, 220, 220, 0.2);
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  border-width: 9px;
+  border-color: #3a3a3e;
 }
 
 .soft .skill_list .progress::before,
-.coding .skill_list .progress::before {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+.soft .skill_list .bar,
+.coding .skill_list .progress::before,
+.coding .skill_list .bar {
+  -webkit-clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
+          clip-path: polygon(50% 0%, 100% 0%, 100% 100%, 50% 100%);
 }
 
 .soft .skill_list .progress::after,
@@ -1274,6 +1295,16 @@ button {
 .soft .skill_list .bar,
 .coding .skill_list .bar {
   z-index: 2;
+  visibility: hidden;
+  -webkit-transition: -webkit-transform 0.5s linear 0.5s;
+  transition: -webkit-transform 0.5s linear 0.5s;
+  transition: transform 0.5s linear 0.5s;
+  transition: transform 0.5s linear 0.5s, -webkit-transform 0.5s linear 0.5s;
+}
+
+.soft .skill_list .bar.visitable,
+.coding .skill_list .bar.visitable {
+  visibility: visible;
 }
 
 .soft .skill_list .progress span,
@@ -1299,104 +1330,194 @@ button {
   }
 }
 
-.percent-5 {
+.p5 .fill {
   -webkit-transform: rotate(18deg);
           transform: rotate(18deg);
 }
 
-.percent-10 {
+.p5 .bar {
+  display: none;
+}
+
+.p10 .fill {
   -webkit-transform: rotate(36deg);
           transform: rotate(36deg);
 }
 
-.percent-15 {
+.p10 .bar {
+  display: none;
+}
+
+.p15 .fill {
   -webkit-transform: rotate(54deg);
           transform: rotate(54deg);
 }
 
-.percent-20 {
+.p15 .bar {
+  display: none;
+}
+
+.p20 .fill {
   -webkit-transform: rotate(72deg);
           transform: rotate(72deg);
 }
 
-.percent-25 {
+.p20 .bar {
+  display: none;
+}
+
+.p25 .fill {
   -webkit-transform: rotate(90deg);
           transform: rotate(90deg);
 }
 
-.percent-30 {
+.p25 .bar {
+  display: none;
+}
+
+.p30 .fill {
   -webkit-transform: rotate(108deg);
           transform: rotate(108deg);
 }
 
-.percent-35 {
+.p30 .bar {
+  display: none;
+}
+
+.p35 .fill {
   -webkit-transform: rotate(126deg);
           transform: rotate(126deg);
 }
 
-.percent-40 {
+.p35 .bar {
+  display: none;
+}
+
+.p40 .fill {
   -webkit-transform: rotate(144deg);
           transform: rotate(144deg);
 }
 
-.percent-45 {
+.p40 .bar {
+  display: none;
+}
+
+.p45 .fill {
   -webkit-transform: rotate(162deg);
           transform: rotate(162deg);
 }
 
-.percent-50 {
+.p45 .bar {
+  display: none;
+}
+
+.p50 .fill {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.percent-55 {
-  -webkit-transform: rotate(198deg);
-          transform: rotate(198deg);
+.p50 .bar {
+  display: none;
 }
 
-.percent-60 {
-  -webkit-transform: rotate(216deg);
-          transform: rotate(216deg);
+.p55 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.percent-65 {
-  -webkit-transform: rotate(234deg);
-          transform: rotate(234deg);
+.p55 .bar {
+  -webkit-transform: rotate(18deg);
+          transform: rotate(18deg);
 }
 
-.percent-70 {
-  -webkit-transform: rotate(252deg);
-          transform: rotate(252deg);
+.p60 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.percent-75 {
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
+.p60 .bar {
+  -webkit-transform: rotate(36deg);
+          transform: rotate(36deg);
 }
 
-.percent-80 {
-  -webkit-transform: rotate(288deg);
-          transform: rotate(288deg);
+.p65 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.percent-85 {
-  -webkit-transform: rotate(306deg);
-          transform: rotate(306deg);
+.p65 .bar {
+  -webkit-transform: rotate(54deg);
+          transform: rotate(54deg);
 }
 
-.percent-90 {
-  -webkit-transform: rotate(324deg);
-          transform: rotate(324deg);
+.p70 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
-.percent-95 {
-  -webkit-transform: rotate(342deg);
-          transform: rotate(342deg);
+.p70 .bar {
+  -webkit-transform: rotate(72deg);
+          transform: rotate(72deg);
 }
 
-.percent-100 {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+.p75 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.p75 .bar {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.p80 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.p80 .bar {
+  -webkit-transform: rotate(108deg);
+          transform: rotate(108deg);
+}
+
+.p85 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.p85 .bar {
+  -webkit-transform: rotate(126deg);
+          transform: rotate(126deg);
+}
+
+.p90 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.p90 .bar {
+  -webkit-transform: rotate(144deg);
+          transform: rotate(144deg);
+}
+
+.p95 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.p95 .bar {
+  -webkit-transform: rotate(162deg);
+          transform: rotate(162deg);
+}
+
+.p100 .fill {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.p100 .bar {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .project {
@@ -1438,10 +1559,38 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
+  cursor: pointer;
 }
 
 .project_image .project_link:hover {
   background-color: rgba(51, 51, 51, 0.1);
+}
+
+.project_image .imageLarge {
+  z-index: 50;
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  cursor: pointer;
+  background-color: rgba(51, 51, 51, 0.8);
+}
+
+.project_image .imageLarge img {
+  max-width: 50vw;
+  max-height: calc(80vh - 70px);
+  margin-left: 50vw;
+  margin-top: 50vh;
+  cursor: auto;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border-radius: 5px;
+}
+
+.project_image .imageLarge.show {
+  display: block;
 }
 
 .project_detail {
@@ -1482,10 +1631,6 @@ button {
 .project_tag span::before {
   content: '#';
   margin-right: 2px;
-}
-
-.no-display {
-  display: none;
 }
 
 .flex-column {
