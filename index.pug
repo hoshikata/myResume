@@ -6,13 +6,36 @@ html(lang="zh")
     title Resume
     link(rel="stylesheet", href="style/style.min.css")
   body
-    .wrap
+    header#header
       .container
-        .row
-          .col-12
-            .content.profile
+          .row
+            .col 
+              nav.nav
+                .navBtn
+                  span
+                  span
+                  span
+                ul
+                  li
+                    button.nav_link.active(data-target="#top") Home
+                  li
+                    button.nav_link(data-target="#profile") About
+                  li
+                    button.nav_link(data-target="#resume") Resume
+                  li
+                    button.nav_link(data-target="#portfolio") Portfolio
+            .scroll_mark
+              .scroll_dropdown
+    #top
+      .top_title 
+        p Huang Yi-Hua
+    #profile.content
+      .wrap
+        .container
+          .row
+            .col-12
               .container
-                .row.flex-center.flex-middle
+                .row.flex-column.flex-center.flex-middle
                   .profile_image
                     .img(style="background-image: url('img/profileimage.jpg')")
                   .profile_detail
@@ -34,16 +57,24 @@ html(lang="zh")
                       li 
                         span E-mail
                         | os88430@gmail.com
-                    button.profile_aboutBtn More...
-                  .profile_about.hide
-                    p 撰寫網頁對我來說是一個非常有趣、處處都有驚喜，並且可以磨練自身思維的一件事。利用程式語言成功與電腦溝通是一件有極大成就感的事。
-                    p 學習新知識之餘，亦喜歡挑戰自己是否能比以前的自己用更少或更簡單的東西但做出一樣的成品，能比過以前的自己才算最大的進步。
-                    p 認為僅有知識是不夠的，要先認清自己「會什麼」「不會什麼」，知道自己的能力範圍在哪，然後思考如何把僅有的能力最大化。為此，一顆靈活的大腦是很重要的，而自己本身亦喜歡讓大腦進行「肌肉訓練」，讓自己的思緒速度不會慢下來，在大學的數學解題與邏輯課程獲得近滿分的成績便是最好的證明。
-                    p 從國小開始接觸網頁相關技術，開啟了我對於網頁設計的興趣，接著國中時便自行開始設計個人網站，漸漸從頁框排版、Float 排版，接著開始接觸 JavaScript、Vue 等等，每一項技術演變都讓當時的我振奮不已，覺得有扇新的門在眼前開啟。
-                    p 在大學時有幸擔任系網的維修員，沒有方向的情況下，在重重程式碼中找到需要修改的部分，並且傾聽學系的需求來改變網頁，讓我慢慢將自己的知識轉變為解決問題的方法。而在研究所過程中，也在專題裡融入隨機產生結果的網頁，並且亦協助解決他組的相同技術問題，分析自己僅有的技能，靈活組合運用解決眼前的問題。
-                    p 前端的變化是十分快速，不能僅滿足於現在已經學會的知識，要時刻保持著學到底的態度才能站穩。而在這過程中磨練自己的觀念，並且更靈活的應用是我今後的課題。
-          .col-12
-            .content.resume
+                    .profile_about 
+                      p 曾擔任多媒體編輯師，在工作之餘持續學習前端技術，對於Web抱有熱情與興趣。喜歡持續學習有趣的新知識，對所有事物都保持著開放的心態。
+                      .profile_more.hide
+                        p 撰寫網頁對我來說是一個非常有趣、處處都有驚喜，並且可以磨練自身思維的一件事。利用程式語言成功與電腦溝通是一件有極大成就感的事。
+                        p 學習新知識之餘，亦喜歡挑戰自己是否能比以前的自己用更少或更簡單的東西但做出一樣的成品，能比過以前的自己才算最大的進步。
+                        p 認為僅有知識是不夠的，要先認清自己「會什麼」「不會什麼」，知道自己的能力範圍在哪，然後思考如何把僅有的能力最大化。為此，一顆靈活的大腦是很重要的，而自己本身亦喜歡讓大腦進行「肌肉訓練」，讓自己的思緒速度不會慢下來，在大學的數學解題與邏輯課程獲得近滿分的成績便是最好的證明。
+                        h5 興趣啟蒙
+                        p 從國小開始接觸網頁相關技術，開啟了我對於網頁設計的興趣，接著國中時便自行開始設計個人網站，漸漸從頁框排版、Float 排版，接著開始接觸 JavaScript、Vue 等等，每一項技術演變都讓當時的我振奮不已，覺得有扇新的門在眼前開啟。
+                        h5 過去經歷
+                        p 在大學時有幸擔任系網的維修員，沒有方向的情況下，在重重程式碼中找到需要修改的部分，並且傾聽學系的需求來改變網頁，讓我慢慢將自己的知識轉變為解決問題的方法。而在研究所過程中，也在專題裡融入隨機產生結果的網頁，並且亦協助解決他組的相同技術問題，分析自己僅有的技能，靈活組合運用解決眼前的問題。
+                        h5 未來期望
+                        p 前端的變化是十分快速，不能僅滿足於現在已經學會的知識，要時刻保持著學到底的態度才能站穩。而在這過程中磨練自己的觀念，並且更靈活的應用是我今後的課題。
+                      button.btn More...
+    #resume.content
+      .wrap
+        .container
+          .row
+            .col-12
               .education.container.gap
                 h3.title Education
                 ul.edu_list
@@ -89,7 +120,7 @@ html(lang="zh")
                   li
                     span.time 2011
                     h6.name 為補習班建設官方網站 
-              .skills.container.gap
+              .skills.container
                 h3.title Skills
                 .row
                   .col-4.col-sm-12
@@ -185,11 +216,25 @@ html(lang="zh")
                         li
                           h6.name Vue
                           span.learning 學習中
-              .work.container
-                h3.title Project
+    #portfolio.content
+      .wrap
+        .container
+          .row
+            .col-12
+              .container
                 .row
                   .col-4.col-md-6.col-sm-12
                     .project.project1
+                      .project_image
+                        .img(style="background-image: url('img/freespeech.png')")
+                        a.project_link(href="javascript:;")
+                      .project_detail
+                        h6 Free Speech
+                        ul.project_list
+                          li 利用貪吃蛇的概念表達循序漸進的學習
+                          li 蛇的花紋使用三角強調蛇的概念
+                  .col-4.col-md-6.col-sm-12
+                    .project.project2
                       .project_image
                         .img(style="background-image: url('img/plurkcssgenerator.png')")
                         a.project_link(href="https://hoshikata.github.io/PlurkCSSGenerator/" target="_blank")
@@ -204,7 +249,7 @@ html(lang="zh")
                           span SASS
                           span JavaScript
                   .col-4.col-md-6.col-sm-12
-                    .project.project2
+                    .project.project3
                       .project_image
                         .img(style="background-image: url('img/colorchange.png')")
                         a.project_link(href="https://hoshikata.github.io/colorchange/" target="_blank")
