@@ -114,7 +114,7 @@ button {outline: none;}
 //- Start
 .content {
   min-height: calc(100vh - 70px);
-  background-color: $colorWhite;
+  background-color: $colorGrayWhite;
   color: $colorBlack;
   &::before {
     content: attr(id);
@@ -415,7 +415,7 @@ button {outline: none;}
   width: 100px;
   overflow: hidden;
   border-radius: 50%;
-  border: 5px solid $colorGrayWhite;
+  border: 5px solid rgba($colorLightGray, 1);
   .img {
     width: 100%;
     padding-top: 100%;
@@ -867,7 +867,6 @@ $fivePercent: 18deg;
       max-height: calc(80vh - 70px);
       margin-left: 50vw;
       margin-top: 50vh;
-      cursor: auto;
       transform: translate(-50%, -50%);
       border-radius: 5px;
     }

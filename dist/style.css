@@ -421,7 +421,7 @@ button {
 
 .content {
   min-height: calc(100vh - 70px);
-  background-color: #FEFEFE;
+  background-color: #F4F4F4;
   color: #333333;
 }
 
@@ -801,7 +801,7 @@ button {
   width: 100px;
   overflow: hidden;
   border-radius: 50%;
-  border: 5px solid #F4F4F4;
+  border: 5px solid gainsboro;
 }
 
 .profile_image .img {
@@ -1583,7 +1583,6 @@ button {
   max-height: calc(80vh - 70px);
   margin-left: 50vw;
   margin-top: 50vh;
-  cursor: auto;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   border-radius: 5px;

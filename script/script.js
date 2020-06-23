@@ -59,9 +59,9 @@
   const bars = document.querySelectorAll('.lang .progress');
   const circleAnimate = circle => {
     const percent = circle.dataset.level;
-    circle.classList.add(`p${percent}`);
     const fill = circle.querySelector('.fill');
     const bar = circle.querySelector('.bar');
+    circle.classList.add(`p${percent}`);
     fill.addEventListener('transitionend', (e) => {
       if (e.propertyName === 'transform') bar.classList.add('visitable');
     });
