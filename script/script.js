@@ -41,6 +41,21 @@
     nav.classList.toggle('nav_open');
   });
 
+  // profile高度
+  const profile = document.querySelector('#profile');
+  const profileRow1 = profile.querySelector('.profile_row1');
+  const profileRowHeightSet = () => {
+    const profileTitle = window.getComputedStyle(profile, '::before');
+    const titleHeightList = [profileTitle['height'], profileTitle['padding-bottom'], profileTitle['padding-top']];
+    const titleHeight = titleHeightList
+      .map(string => string.replace(/px/gi, '') * 1)
+      .reduce((prev, next) => {return prev + next}, 0) + 'px';
+    const rowHeight = `calc(100vh - ${titleHeight} - ${header.offsetHeight}px * 2)`;
+    profileRow1.style.setProperty('min-height', rowHeight);
+  }
+  profileRowHeightSet();
+  window.addEventListener('resize', profileRowHeightSet);
+
   // 自傳詳細的按鈕
   const aboutMore = document.querySelector('.profile_more');
   const aboutBtn = document.querySelector('.profile_about .btn');
