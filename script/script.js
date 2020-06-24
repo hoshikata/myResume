@@ -14,9 +14,7 @@
   blockList.forEach(item => {
     const navItem = document.querySelector(`[data-target="${item}"]`);
     const block = document.querySelector(item);
-    navItem.addEventListener('click', () => {
-      window.scrollTo(0, block.offsetTop - 70);
-    });
+    navItem.addEventListener('click', () => window.scrollTo(0, block.offsetTop - header.offsetHeight));
   });
 
   // 隨卷軸移動讓 nav item 加上 active
@@ -52,9 +50,9 @@
       .reduce((prev, next) => {return prev + next}, 0) + 'px';
     const rowHeight = `calc(100vh - ${titleHeight} - ${header.offsetHeight}px * 2)`;
     profileRow1.style.setProperty('min-height', rowHeight);
-  }
-  profileRowHeightSet();
-  window.addEventListener('resize', profileRowHeightSet);
+  };
+  // profileRowHeightSet();
+  // window.addEventListener('resize', profileRowHeightSet);
 
   // 自傳詳細的按鈕
   const aboutMore = document.querySelector('.profile_more');
@@ -86,11 +84,12 @@
     bar.classList.add(`size-${percent}`);
   };
   const skillAnimateActive = () => {
-    if (window.scrollY + window.innerHeight / 3 > skillTop) {
+    // if (window.scrollY + window.innerHeight / 3 > skillTop) {
       circles.forEach(circleAnimate);
       bars.forEach(barAnimate);
-    }
+    // }
   };
+  skillAnimateActive();
   window.addEventListener('scroll', skillAnimateActive);
 
   // 作品集圖片放大
@@ -99,9 +98,7 @@
   const showImageLarge = () => {
     imageLarge.forEach(imgBlock => {
       imgBlock.classList.add('show');
-      imgBlock.addEventListener('click', () => {
-        imgBlock.classList.remove('show');
-      });
+      imgBlock.addEventListener('click', () => imgBlock.classList.remove('show'));
     });
   };
   projectImageLink.forEach(link => link.addEventListener('click', showImageLarge));

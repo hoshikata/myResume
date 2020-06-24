@@ -594,7 +594,7 @@ button {outline: none;}
 //- Edu Exp
 .edu_list, 
 .exp_list {
-  margin-left: 50px;
+  margin-left: 30px;
   border-left: 2px solid rgba($colorLightGray, 0.2);
   & > li {
     position: relative;
@@ -633,9 +633,6 @@ button {outline: none;}
       }
     }
   }
-  @include breakpoint(md) {
-    margin-left: 30px;
-  }
   @include breakpoint(sm) {
     margin-left: 10px;
     & > li {
@@ -651,6 +648,7 @@ button {outline: none;}
   }
   .time {
     font-family: sans-serif;
+    opacity: 0.5;
   }
   .detail {
     padding: 0;
@@ -733,7 +731,7 @@ button {outline: none;}
     height: 5px;
     overflow: hidden;
     border-radius: 5px;
-    background-color: rgba($colorLightGray, 0.2);
+    background-color: mix($colorLightGray, $colorDefault, 20%);
   }
   .bar {
     position: absolute;

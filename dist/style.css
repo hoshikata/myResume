@@ -1016,7 +1016,7 @@ button {
 
 .edu_list,
 .exp_list {
-  margin-left: 50px;
+  margin-left: 30px;
   border-left: 2px solid rgba(220, 220, 220, 0.2);
 }
 
@@ -1071,13 +1071,6 @@ button {
   background-color: #FFC500;
 }
 
-@media only screen and (max-width: 770px) {
-  .edu_list,
-  .exp_list {
-    margin-left: 30px;
-  }
-}
-
 @media only screen and (max-width: 540px) {
   .edu_list,
   .exp_list {
@@ -1101,6 +1094,7 @@ button {
 .edu_list .time,
 .exp_list .time {
   font-family: sans-serif;
+  opacity: 0.5;
 }
 
 .edu_list .detail,
@@ -1199,7 +1193,7 @@ button {
   height: 5px;
   overflow: hidden;
   border-radius: 5px;
-  background-color: rgba(220, 220, 220, 0.2);
+  background-color: #3a3a3e;
 }
 
 .lang .skill_list .bar {

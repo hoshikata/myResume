@@ -5,6 +5,7 @@ html(lang="zh")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Resume
     link(rel="stylesheet", href="style/style.min.css")
+    link(rel="stylesheet", href="style/onepage.min.css")
   body
     header#header
       .container
@@ -74,7 +75,7 @@ html(lang="zh")
       .wrap
         .container
           .row
-            .col-12
+            .col-6.col-md-12
               .education.container.gap
                 h3.title Education
                 ul.edu_list
@@ -92,6 +93,7 @@ html(lang="zh")
                     ul.detail
                       li 大學期間協助音樂系助教成立合唱社團並加入
                       li 外修數位遊戲設計課並產出一款遊戲企劃
+            .col-6.col-md-12
               .experience.container.gap
                 h3.title Experience
                 ul.exp_list
@@ -120,6 +122,7 @@ html(lang="zh")
                   li
                     span.time 2011
                     h6.name 為補習班建設官方網站 
+            .col-12.col-md-12
               .skills.container
                 h3.title Skills
                 .row
@@ -260,6 +263,7 @@ html(lang="zh")
                         ul.project_list
                           li 利用JavaScript做出遊戲並排除錯誤
                           li 簡易應用JavaScript Prototype
+                          li 簡易應用Local Storage
                         p.project_tag
                           span Html / CSS
                           span SASS
