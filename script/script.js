@@ -51,8 +51,8 @@
     const rowHeight = `calc(100vh - ${titleHeight} - ${header.offsetHeight}px * 2)`;
     profileRow1.style.setProperty('min-height', rowHeight);
   };
-  // profileRowHeightSet();
-  // window.addEventListener('resize', profileRowHeightSet);
+  profileRowHeightSet();
+  window.addEventListener('resize', profileRowHeightSet);
 
   // 自傳詳細的按鈕
   const aboutMore = document.querySelector('.profile_more');
@@ -84,12 +84,12 @@
     bar.classList.add(`size-${percent}`);
   };
   const skillAnimateActive = () => {
-    // if (window.scrollY + window.innerHeight / 3 > skillTop) {
+    if (window.scrollY + window.innerHeight / 3 > skillTop) {
       circles.forEach(circleAnimate);
       bars.forEach(barAnimate);
-    // }
+    }
   };
-  skillAnimateActive();
+  // skillAnimateActive();
   window.addEventListener('scroll', skillAnimateActive);
 
   // 作品集圖片放大
