@@ -418,10 +418,15 @@ button {outline: none;}
 
 
 //- profile
-#profile .row {
-  flex-direction: row;
-  @include breakpoint(md) {
-    flex-direction: column;
+#profile {
+  .wrap {
+    max-width: 960px;
+  }
+  .row {
+    flex-direction: row;
+    @include breakpoint(md) {
+      flex-direction: column;
+    }
   }
 }
 
@@ -672,20 +677,31 @@ button {outline: none;}
       background-image: linear-gradient(90deg, $colorPrimary, transparent);
     }
   }
-  .row > div {
-    &:nth-of-type(even) {
-      margin-top: 40px;
-    }
-    @include breakpoint(sm) {
-      & + div {
+  .row {
+    margin: auto 10px;
+    & > div {
+      &:nth-of-type(even) {
         margin-top: 40px;
+      }
+      @include breakpoint(md) {
+        &:nth-of-type(2) {
+          margin-top: 0;
+        }
+        &:nth-of-type(n+3) {
+          margin-top: 40px;
+        }
+      }
+      @include breakpoint(sm) {
+        &:nth-of-type(n+2)  {
+          margin-top: 40px;
+        }
       }
     }
   }
 }
 .order-2 {
   order: 1;
-  @include breakpoint(sm) {
+  @include breakpoint(md) {
     order: 0;
   }
 }
