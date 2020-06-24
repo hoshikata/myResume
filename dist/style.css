@@ -463,7 +463,7 @@ button {
 }
 
 #header {
-  z-index: 100;
+  z-index: 102;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -495,11 +495,12 @@ button {
 }
 
 .nav .navBtn {
+  z-index: 103;
   display: none;
   position: relative;
-  width: 30px;
-  height: 20px;
-  margin: 25px 20px;
+  width: 22px;
+  height: 16px;
+  margin: 27px 24px;
   cursor: pointer;
 }
 
@@ -531,13 +532,12 @@ button {
           transform: translateY(-100%);
 }
 
-.nav .navBtn:hover span, .nav .navBtn.navBtn_close span {
+.nav .navBtn.navBtn_close span {
   -webkit-transform: translateY(-50%) rotate(-45deg);
           transform: translateY(-50%) rotate(-45deg);
 }
 
-.nav .navBtn:hover span:first-of-type,
-.nav .navBtn:hover span:last-of-type, .nav .navBtn.navBtn_close span:first-of-type,
+.nav .navBtn.navBtn_close span:first-of-type,
 .nav .navBtn.navBtn_close span:last-of-type {
   top: 50%;
   -webkit-transform: translateY(-50%) rotate(45deg);
@@ -586,9 +586,10 @@ button {
     bottom: 0;
     right: -100vw;
     width: 100vw;
-    height: calc(100vh - 70px);
+    height: 100vh;
     margin: 0;
     padding: 40px;
+    padding-top: 100px;
     -webkit-transition: 0.3s;
     transition: 0.3s;
     -webkit-box-sizing: border-box;
@@ -621,8 +622,8 @@ button {
 
 .nav_link::before, .nav_link::after {
   content: '';
-  position: absolute;
   display: inline-block;
+  position: absolute;
   top: 50%;
   left: 0;
   width: 12px;
@@ -649,6 +650,12 @@ button {
 
 .nav_link.active::after {
   width: 12px;
+}
+
+@media only screen and (max-width: 540px) {
+  .nav_link {
+    width: 100%;
+  }
 }
 
 .scroll_mark {
@@ -1567,7 +1574,7 @@ button {
 }
 
 .project_image .imageLarge {
-  z-index: 50;
+  z-index: 101;
   display: none;
   position: fixed;
   top: 0;
