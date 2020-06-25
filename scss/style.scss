@@ -204,6 +204,7 @@ button {outline: none;}
       transform: translateY(-50%);
       transform-origin: center;
       transition: 0.3s;
+      border-radius: 5px;
       background-color: $colorGrayWhite;
     }
     span:first-of-type {
@@ -216,12 +217,12 @@ button {outline: none;}
     }
     &.navBtn_close {
       span {
-        transform: translateY(-50%) rotate(-45deg);
+        transform: translateY(-50%) rotate(135deg);
       }
       span:first-of-type, 
       span:last-of-type {
         top: 50%;
-        transform: translateY(-50%) rotate(45deg);
+        transform: translateY(-50%) rotate(225deg);
       }
     }
   }
@@ -648,6 +649,7 @@ button {outline: none;}
   }
   .time {
     font-family: sans-serif;
+    font-weight: 700;
     opacity: 0.5;
   }
   .detail {
