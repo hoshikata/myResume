@@ -92,14 +92,14 @@
   // skillAnimateActive();
   window.addEventListener('scroll', skillAnimateActive);
 
-  // 作品集圖片放大
-  const projectImageLink = document.querySelectorAll('div.project_link');
-  const imageLarge = document.querySelectorAll('.imageLarge');
-  const showImageLarge = () => {
-    imageLarge.forEach(imgBlock => {
-      imgBlock.classList.add('show');
-      imgBlock.addEventListener('click', () => imgBlock.classList.remove('show'));
-    });
+  // 作品集光箱
+  const projectImageLink = document.querySelectorAll('.imageLink');
+  const showImageLarge = (e) => {
+    e.preventDefault();
+    const imageLarge = e.currentTarget.nextSibling;
+    const imageLargeClose = imageLarge.querySelector('.imageLarge_close');
+    imageLarge.classList.add('show');
+    imageLargeClose.addEventListener('click', () => imageLarge.classList.remove('show'));
   };
   projectImageLink.forEach(link => link.addEventListener('click', showImageLarge));
 }

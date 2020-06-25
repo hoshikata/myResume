@@ -227,19 +227,22 @@ html(lang="zh-Hant-TW")
               .container
                 .row
                   .col-4.col-md-6.col-sm-12
-                    .project.project1
+                    .project
                       .project_image
-                        .img(style="background-image: url('img/freespeech.png')")
-                        .project_link
-                        .imageLarge
-                          img(src="img/freespeech.png")
+                        .img(style="background-image: url('img/colorchange.png')")
+                        a.project_link(href="https://hoshikata.github.io/colorchange/" target="_blank")
                       .project_detail
-                        h6 Free Speech
+                        h6 Color Change
                         ul.project_list
-                          li 利用貪吃蛇的概念表達循序漸進的學習
-                          li 蛇的花紋使用三角強調蛇的概念
+                          li 利用 JavaScript 做出遊戲並排除錯誤
+                          li 簡易應用 JavaScript Prototype
+                          li 簡易應用 Local Storage
+                        p.project_tag
+                          span Html / CSS
+                          span SASS
+                          span JavaScript
                   .col-4.col-md-6.col-sm-12
-                    .project.project2
+                    .project
                       .project_image
                         .img(style="background-image: url('img/plurkcssgenerator.png')")
                         a.project_link(href="https://hoshikata.github.io/PlurkCSSGenerator/" target="_blank")
@@ -254,18 +257,28 @@ html(lang="zh-Hant-TW")
                           span SASS
                           span JavaScript
                   .col-4.col-md-6.col-sm-12
-                    .project.project3
+                    .project
                       .project_image
-                        .img(style="background-image: url('img/colorchange.png')")
-                        a.project_link(href="https://hoshikata.github.io/colorchange/" target="_blank")
+                        .img(style="background-image: url('img/freespeech.png')")
+                        a.project_link.imageLink(href="javascript:;")
+                        .imageLarge
+                          .imageLarge_close
+                          img(src="img/freespeech.png")
                       .project_detail
-                        h6 Color Change
+                        h6 Free Speech
                         ul.project_list
-                          li 利用 JavaScript 做出遊戲並排除錯誤
-                          li 簡易應用 JavaScript Prototype
-                          li 簡易應用 Local Storage
-                        p.project_tag
-                          span Html / CSS
-                          span SASS
-                          span JavaScript
+                          li 利用貪吃蛇的概念表達循序漸進的學習
+                          li 蛇的花紋使用三角強調蛇的概念
+                  .col-4.col-md-6.col-sm-12
+                    .project
+                      .project_image
+                        .img(style="background-image: url('img/oldwebsite.png')")
+                        a.project_link.imageLink(href="javascript:;")
+                        .imageLarge
+                          .imageLarge_close
+                          img(src="img/oldwebsite.png")
+                      .project_detail
+                        h6 Old Website Review
+                        ul.project_list
+                          li 利用頁框切版
     script(src="script/script.js")
