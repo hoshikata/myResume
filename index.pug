@@ -4,6 +4,7 @@ html(lang="zh-Hant-TW")
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Resume
+    script(defer src="script/all.min.js")
     link(rel="stylesheet", href="style/style.min.css")
     //- link(rel="stylesheet", href="style/onepage.min.css")
   body
@@ -42,10 +43,12 @@ html(lang="zh-Hant-TW")
                   .profile_detail
                     h2.profile_name 黃憶樺 
                       span.profile_enName Huang Yi-Hua
+                      a.profile_link(href="https://github.com/hoshikata" target="_blank")
+                        i.fab.fa-github
                     ul.profile_info
                       li 
                         span Job
-                        | 網頁工程師
+                        | 網頁 / 前端工程師
                       li 
                         span Birth
                         | July, 1993
@@ -59,6 +62,12 @@ html(lang="zh-Hant-TW")
                         span E-mail
                         | os88430@gmail.com
                     .profile_about 
+                      ol
+                        li 熟悉HTML、CSS、SASS、JAVASCRIPT、RWD設計，可獨立切版完成網頁
+                        li 應用SASS規劃產出RWD網頁
+                        li 分析網站並做出輔助工具
+                        li 利用JavaScript做出遊戲並排除錯誤
+                        li 現正學習Vue.js與Python提升自己的網頁技能與應變力
                       p 曾擔任多媒體編輯師，在工作之餘持續學習前端技術，對於 Web 抱有熱情與興趣。喜歡持續學習有趣的新知識，對所有事物都保持著開放的心態。
                       .profile_more.hide
                         p 撰寫網頁對我來說是一個非常有趣、處處都有驚喜，並且可以磨練自身思維的一件事。利用程式語言成功與電腦溝通是一件有極大成就感的事。
@@ -221,64 +230,62 @@ html(lang="zh-Hant-TW")
                           span.learning 學習中
     #portfolio.content
       .wrap
+        h3.title Portfolio
         .container
           .row
-            .col-12
-              .container
-                .row
-                  .col-4.col-md-6.col-sm-12
-                    .project
-                      .project_image
-                        .img(style="background-image: url('img/colorchange.png')")
-                        a.project_link(href="https://hoshikata.github.io/colorchange/" target="_blank")
-                      .project_detail
-                        h6 Color Change
-                        ul.project_list
-                          li 利用 JavaScript 做出遊戲並排除錯誤
-                          li 簡易應用 JavaScript Prototype
-                          li 簡易應用 Local Storage
-                        p.project_tag
-                          span Html / CSS
-                          span SASS
-                          span JavaScript
-                  .col-4.col-md-6.col-sm-12
-                    .project
-                      .project_image
-                        .img(style="background-image: url('img/plurkcssgenerator.png')")
-                        a.project_link(href="https://hoshikata.github.io/PlurkCSSGenerator/" target="_blank")
-                      .project_detail
-                        h6 Plurk CSS Generator
-                        ul.project_list
-                          li 分析噗浪社群網站並做出輔助工具
-                          li 應用 SASS 做出簡易的網格系統
-                          li 實作簡易的 RWD 網站
-                        p.project_tag 
-                          span Html / CSS
-                          span SASS
-                          span JavaScript
-                  .col-4.col-md-6.col-sm-12
-                    .project
-                      .project_image
-                        .img(style="background-image: url('img/freespeech.png')")
-                        a.project_link.imageLink(href="javascript:;")
-                        .imageLarge
-                          .imageLarge_close
-                          img(src="img/freespeech.png")
-                      .project_detail
-                        h6 Free Speech
-                        ul.project_list
-                          li 利用貪吃蛇的概念表達循序漸進的學習
-                          li 蛇的花紋使用三角強調蛇的概念
-                  .col-4.col-md-6.col-sm-12
-                    .project
-                      .project_image
-                        .img(style="background-image: url('img/oldwebsite.png')")
-                        a.project_link.imageLink(href="javascript:;")
-                        .imageLarge
-                          .imageLarge_close
-                          img(src="img/oldwebsite.png")
-                      .project_detail
-                        h6 Old Website Review
-                        ul.project_list
-                          li 利用頁框切版
+            .col-4.col-md-6.col-sm-12
+              .project
+                .project_image
+                  .img(style="background-image: url('img/colorchange.png')")
+                  a.project_link(href="https://hoshikata.github.io/colorchange/" target="_blank")
+                .project_detail
+                  h6 Color Change
+                  ul.project_list
+                    li 利用 JavaScript 做出遊戲並排除錯誤
+                    li 簡易應用 JavaScript Prototype
+                    li 簡易應用 Local Storage
+                  p.project_tag
+                    span Html / CSS
+                    span SASS
+                    span JavaScript
+            .col-4.col-md-6.col-sm-12
+              .project
+                .project_image
+                  .img(style="background-image: url('img/plurkcssgenerator.png')")
+                  a.project_link(href="https://hoshikata.github.io/PlurkCSSGenerator/" target="_blank")
+                .project_detail
+                  h6 Plurk CSS Generator
+                  ul.project_list
+                    li 分析噗浪社群網站並做出輔助工具
+                    li 應用 SASS 做出簡易的網格系統
+                    li 實作簡易的 RWD 網站
+                  p.project_tag 
+                    span Html / CSS
+                    span SASS
+                    span JavaScript
+            .col-4.col-md-6.col-sm-12
+              .project
+                .project_image
+                  .img(style="background-image: url('img/freespeech.png')")
+                  a.project_link.imageLink(href="javascript:;")
+                  .imageLarge
+                    .imageLarge_close
+                    img(src="img/freespeech.png")
+                .project_detail
+                  h6 Free Speech
+                  ul.project_list
+                    li 利用貪吃蛇的概念表達循序漸進的學習
+                    li 蛇的花紋使用三角強調蛇的概念
+            .col-4.col-md-6.col-sm-12
+              .project
+                .project_image
+                  .img(style="background-image: url('img/oldwebsite.png')")
+                  a.project_link.imageLink(href="javascript:;")
+                  .imageLarge
+                    .imageLarge_close
+                    img(src="img/oldwebsite.png")
+                .project_detail
+                  h6 Old Website Review
+                  ul.project_list
+                    li 利用頁框切版
     script(src="script/script.js")

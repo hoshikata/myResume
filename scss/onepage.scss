@@ -1,7 +1,8 @@
 #header, 
 #top, 
-#portfolio, 
-.profile_image, 
+#portfolio .row > :last-of-type, 
+.profile_link, 
+.skills, 
 .btn {
   display: none;
 }
@@ -19,6 +20,18 @@
   max-width: 1024px !important;
   margin-bottom: 0;
   padding-bottom: 20px;
+}
+
+#profile .profile_row2 {
+  position: relative;
+}
+.profile_image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 50px;
+  margin-right: 50px;
+  border-radius: 10px;
 }
 
 .profile_detail {
@@ -44,8 +57,20 @@
 }
 .profile_about {
   padding: 0;
+  ol {
+    margin: 0;
+    padding-left: 15px;
+  }
   p {
     margin: 0;
+  }
+}
+
+#resume .wrap {
+  padding-left: 15px;
+  padding-bottom: 0;
+  .row > div {
+    padding: 0;
   }
 }
 
@@ -56,9 +81,29 @@
 
 .edu_list, 
 .exp_list {
+  margin-left: 20px;
   border-left-color: #ccc;
-  & > li::after {
-    background-color: #fff;
-    box-shadow: inset 0 0 0 2px #fff;
+  & > li {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    &::after {
+      left: -26px;
+      background-color: #f4f4f4;
+      box-shadow: inset 0 0 0 2px #f4f4f4;
+    }
+  }
+  .detail li::before {
+    background-color: #ccc;
+  }
+}
+
+#portfolio .wrap {
+  padding-left: 15px;
+  padding-right: 30px;
+  box-sizing: border-box;
+  & > .title {
+    display: block;
+    margin: 0;
+    padding: 0;
   }
 }

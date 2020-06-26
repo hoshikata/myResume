@@ -476,6 +476,15 @@ button {outline: none;}
   font-size: 0.6em;
   font-weight: 300;
 }
+.profile_link {
+  display: inline-block;
+  padding-left: 10px;
+  font-size: 0.8em;
+  color: $colorBlack;
+  &:hover {
+    color: $colorPrimary;
+  }
+}
 
 .profile_info {
   padding-top: 10px;
@@ -527,6 +536,9 @@ button {outline: none;}
 .profile_about {
   width: 100%;
   padding: 20px 0;
+}
+ol {
+  padding-bottom: 10px;
 }
 .profile_more {
   max-height: 1000px;
@@ -855,6 +867,9 @@ $fivePercent: 18deg;
 
 
 //- Portfolio
+#portfolio .wrap > .title {
+  display: none;
+}
 .project {
   display: flex;
   flex-direction: column;
@@ -907,7 +922,7 @@ $fivePercent: 18deg;
       cursor: pointer;
     }
     img {
-      max-width: 50vw;
+      max-width: 80vw;
       max-height: calc(80vh - #{$headerHeight});
       margin-left: 50vw;
       margin-top: 50vh;

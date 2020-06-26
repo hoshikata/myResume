@@ -89,7 +89,6 @@
       bars.forEach(barAnimate);
     }
   };
-  // skillAnimateActive();
   window.addEventListener('scroll', skillAnimateActive);
 
   // 作品集光箱
