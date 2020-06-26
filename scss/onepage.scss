@@ -1,6 +1,6 @@
 #header, 
 #top, 
-#portfolio .row > :last-of-type, 
+#portfolio .row > :nth-of-type(n+4), 
 .profile_link, 
 .skills, 
 .btn {

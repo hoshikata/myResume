@@ -10,24 +10,24 @@ html(lang="zh-Hant-TW")
   body
     header#header
       .container
-          .row
-            .col 
-              nav.nav
-                .navBtn
-                  span
-                  span
-                  span
-                ul
-                  li
-                    button.nav_link.active(data-target="#top") Home
-                  li
-                    button.nav_link(data-target="#profile") About
-                  li
-                    button.nav_link(data-target="#resume") Resume
-                  li
-                    button.nav_link(data-target="#portfolio") Portfolio
-            .scroll_mark
-              .scroll_dropdown
+        .row
+          .col 
+            nav.nav
+              .navBtn
+                span
+                span
+                span
+              ul
+                li
+                  button.nav_link.active(data-target="#top") Home
+                li
+                  button.nav_link(data-target="#profile") About
+                li
+                  button.nav_link(data-target="#resume") Resume
+                li
+                  button.nav_link(data-target="#portfolio") Portfolio
+          .scroll_mark
+            .scroll_dropdown
     #top
       .top_title 
         p Huang Yi-Hua
@@ -279,6 +279,18 @@ html(lang="zh-Hant-TW")
                   ul.project_list
                     li 利用貪吃蛇的概念表達循序漸進的學習
                     li 蛇的花紋使用三角強調蛇的概念
+            .col-4.col-md-6.col-sm-12
+              .project
+                .project_image
+                  .img(style="background-image: url('img/bleeze.png')")
+                  a.project_link.imageLink(href="javascript:;")
+                  .imageLarge
+                    .imageLarge_close
+                    img(src="img/bleeze.png")
+                .project_detail
+                  h6 動漫同心圓
+                  ul.project_list
+                    li 利用 Float 切版
             .col-4.col-md-6.col-sm-12
               .project
                 .project_image
