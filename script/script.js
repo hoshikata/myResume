@@ -33,16 +33,16 @@
 
   // 漢堡選單
   const navBtn = document.querySelector('.navBtn');
-  const nav = document.querySelector('.nav ul');
   navBtn.addEventListener('click', () => {
+    const nav = document.querySelector('.nav ul');
     navBtn.classList.toggle('navBtn_close');
     nav.classList.toggle('nav_open');
   });
 
   // profile高度
-  const profile = document.querySelector('#profile');
-  const profileRow1 = profile.querySelector('.profile_row1');
   const profileRowHeightSet = () => {
+    const profile = document.querySelector('#profile');
+    const profileRow1 = profile.querySelector('.profile_row1');
     const profileTitle = window.getComputedStyle(profile, '::before');
     const titleHeightList = [profileTitle['height'], profileTitle['padding-bottom'], profileTitle['padding-top']];
     const titleHeight = titleHeightList
@@ -55,21 +55,26 @@
   window.addEventListener('resize', profileRowHeightSet);
 
   // 自傳詳細的按鈕
-  const aboutMore = document.querySelector('.profile_more');
   const aboutBtn = document.querySelector('.profile_about .btn');
   let aboutBtnText = 'Hide';
-  const moreBtnHandler = () => {
+  const moreBtnHandler = function () {
+    const aboutMore = document.querySelector('.profile_more');
     aboutMore.classList.toggle('hide');
-    const preText = aboutBtn.textContent;
-    aboutBtn.textContent = aboutBtnText;
+    const preText = this.textContent;
+    this.textContent = aboutBtnText;
     aboutBtnText = preText;
   };
   aboutBtn.addEventListener('click', moreBtnHandler);
 
-  // 技能圖動畫
-  const skillTop = document.querySelector('.skills').offsetTop;
+  // 技能圖百分比數
   const circles = document.querySelectorAll('.soft .progress, .coding .progress');
-  const bars = document.querySelectorAll('.lang .progress');
+  circles.forEach(circle => {
+    const percent = circle.dataset.level;
+    const span = circle.querySelector('span');
+    span.textContent = percent + '%';
+  });
+
+  // 技能圖動畫
   const circleAnimate = circle => {
     const percent = circle.dataset.level;
     const fill = circle.querySelector('.fill');
@@ -84,6 +89,8 @@
     bar.classList.add(`size-${percent}`);
   };
   const skillAnimateActive = () => {
+    const skillTop = document.querySelector('.skills').offsetTop;
+    const bars = document.querySelectorAll('.lang .progress');
     if (window.scrollY + window.innerHeight / 3 > skillTop) {
       circles.forEach(circleAnimate);
       bars.forEach(barAnimate);
