@@ -81,163 +81,166 @@ html(lang="zh-Hant-TW")
                         h5 未來期望
                         p 前端的變化是十分快速，不能僅滿足於現在已經學會的知識，要時刻保持著學到底的態度才能站穩。而在這過程中磨練自己的觀念，並且更靈活的應用是我今後的課題。
                       button.btn More...
+    // Grid
     #resume.content
       .wrap
         .container
-          .row
-            .col-6.col-md-12
-              .education.container.gap
-                h3.title Education
-                ul.edu_list
-                  li
-                    span.time 2015 - 2016
-                    h6.name 國立嘉義大學 數位學習設計與管理研究所 休學
-                    ul.detail
-                      li 製作一款數位桌遊的遊戲企劃
-                      li 修改一款數位桌遊之規則
-                      li 論文 The Influence of Thinking Styles and Self-adjustment Strategies Apply on Digital Table Game
-                      li 論文 Verbal Behavior in Digital Board Game: The Association between Personality Traits and Lying Behavior
-                  li
-                    span.time 2011 - 2015
-                    h6.name 國立台南大學 生物科技學系
-                    ul.detail
-                      li 大學期間協助音樂系助教成立合唱社團並加入
-                      li 外修數位遊戲設計課並產出一款遊戲企劃
-                  li
-                    span.time 2008 - 2011
-                    h6.name 國立嘉義女子高級中學
-            .col-6.col-md-12
-              .experience.container.gap
-                h3.title Experience
-                ul.exp_list
-                  li
-                    span.time Sep 2017 - Mar 2020 
-                    h6.name 任職於旺宇興業股份有限公司 多媒體編輯師
-                    ul.detail
-                      li 剪輯影片與依需求編輯影片順序
-                      li 剪輯製作影片之預告片
-                      li 製作相對應影片之封面圖片
-                      li 將字幕鑲上影片
-                      li 規劃影片上下架順序與時程表
-                  li
-                    span.time Jan 2017 - Mar 2017
-                    h6.name 任職於穎冠茶飲企業有限公司 服務生
-                  li
-                    span.time 2016
-                    h6.name 實作一款策略桌遊
-                    ul.detail
-                      li 主要設計遊戲規則與遊玩方式之遊戲企劃部分
-                      li 利用 JavaScript 製作隨機內容網頁並應用於遊戲上
-                      li 書寫論文刊登於 Int. J. of Mobile Learning and Organisation
-                  li
-                    span.time 2013 - 2015
-                    h6.name 管理修改學系網站
-                  li
-                    span.time 2011
-                    h6.name 為補習班建設官方網站 
-            .col-12.col-md-12
-              .skills.container
-                h3.title Skills
-                .row
-                  .col-4.col-md-6.col-sm-12
-                    .certificate
-                      h4 Certificates
-                      ul.skill_list
-                        li TQC-IP PI Primary
-                        li JLPT N2
-                  .col-4.col-md-6.col-sm-12.order-2
-                    .lang
-                      h4 Languages
-                      ul.skill_list
-                        li
-                          h6.name 中文
-                          .progress(data-level="8")
-                            .bar
-                        li
-                          h6.name 英文
-                          .progress(data-level="4")
-                            .bar
-                        li
-                          h6.name 日文
-                          .progress(data-level="6")
-                            .bar
-                  .col-8.col-md-12.col-sm-12
-                    .soft
-                      h4 Soft Skills
-                      ul.skill_list
-                        li
-                          h6.name Photoshop
-                          .progress(data-level="70")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name Illustrator
-                          .progress(data-level="70")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name Premiere
-                          .progress(data-level="50")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name VS Code
-                          .progress(data-level="40")
-                            .fill
-                            .bar
-                            span
-                  .col-8.col-md-12.col-sm-12.order-2
-                    .coding
-                      h4 Coding Skills
-                      ul.skill_list
-                        li
-                          h6.name HTML / CSS
-                          .progress(data-level="75")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name SASS
-                          .progress(data-level="75")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name JavaScript
-                          .progress(data-level="55")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name jQuery
-                          .progress(data-level="45")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name Bootstrap
-                          .progress(data-level="45")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name RWD
-                          .progress(data-level="55")
-                            .fill
-                            .bar
-                            span
-                        li
-                          h6.name Vue
-                          span.learning 學習中
+          .row.grid
+            //- .col-6.col-md-12
+            .education.container.gap
+              h3.title Education
+              ul.edu_list
+                li
+                  span.time 2015 - 2016
+                  h6.name 國立嘉義大學 數位學習設計與管理研究所 休學
+                  ul.detail
+                    li 製作一款數位桌遊的遊戲企劃
+                    li 修改一款數位桌遊之規則
+                    li 論文 The Influence of Thinking Styles and Self-adjustment Strategies Apply on Digital Table Game
+                    li 論文 Verbal Behavior in Digital Board Game: The Association between Personality Traits and Lying Behavior
+                li
+                  span.time 2011 - 2015
+                  h6.name 國立台南大學 生物科技學系
+                  ul.detail
+                    li 大學期間協助音樂系助教成立合唱社團並加入
+                    li 外修數位遊戲設計課並產出一款遊戲企劃
+                li
+                  span.time 2008 - 2011
+                  h6.name 國立嘉義女子高級中學
+            //- .col-6.col-md-12
+            .experience.container.gap
+              h3.title Experience
+              ul.exp_list
+                li
+                  span.time Sep 2017 - Mar 2020 
+                  h6.name 任職於旺宇興業股份有限公司 多媒體編輯師
+                  ul.detail
+                    li 剪輯影片與依需求編輯影片順序
+                    li 剪輯製作影片之預告片
+                    li 製作相對應影片之封面圖片
+                    li 將字幕鑲上影片
+                    li 規劃影片上下架順序與時程表
+                li
+                  span.time Jan 2017 - Mar 2017
+                  h6.name 任職於穎冠茶飲企業有限公司 服務生
+                li
+                  span.time 2016
+                  h6.name 實作一款策略桌遊
+                  ul.detail
+                    li 主要設計遊戲規則與遊玩方式之遊戲企劃部分
+                    li 利用 JavaScript 製作隨機內容網頁並應用於遊戲上
+                    li 書寫論文刊登於 Int. J. of Mobile Learning and Organisation
+                li
+                  span.time 2013 - 2015
+                  h6.name 管理修改學系網站
+                li
+                  span.time 2011
+                  h6.name 為補習班建設官方網站 
+            //- .col-12.col-md-12
+            .skills.container
+              h3.title Skills
+              .row
+                .col-4.col-md-6.col-sm-12
+                  .certificate
+                    h4 Certificates
+                    ul.skill_list
+                      li TQC-IP PI Primary
+                      li JLPT N2
+                .col-4.col-md-6.col-sm-12.order-2
+                  .lang
+                    h4 Languages
+                    ul.skill_list
+                      li
+                        h6.name 中文
+                        .progress(data-level="8")
+                          .bar
+                      li
+                        h6.name 英文
+                        .progress(data-level="4")
+                          .bar
+                      li
+                        h6.name 日文
+                        .progress(data-level="6")
+                          .bar
+                .col-8.col-md-12.col-sm-12
+                  .soft
+                    h4 Soft Skills
+                    ul.skill_list
+                      li
+                        h6.name Photoshop
+                        .progress(data-level="70")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name Illustrator
+                        .progress(data-level="70")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name Premiere
+                        .progress(data-level="50")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name VS Code
+                        .progress(data-level="40")
+                          .fill
+                          .bar
+                          span
+                .col-8.col-md-12.col-sm-12.order-2
+                  .coding
+                    h4 Coding Skills
+                    ul.skill_list
+                      li
+                        h6.name HTML / CSS
+                        .progress(data-level="75")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name SASS
+                        .progress(data-level="75")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name JavaScript
+                        .progress(data-level="55")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name jQuery
+                        .progress(data-level="45")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name Bootstrap
+                        .progress(data-level="45")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name RWD
+                        .progress(data-level="55")
+                          .fill
+                          .bar
+                          span
+                      li
+                        h6.name Vue
+                        span.learning 學習中
+    // Float
     #portfolio.content
       .wrap
         h3.title Portfolio
         .container
           .row
-            .col-4.col-md-6.col-sm-12
+            //- .col-4.col-md-6.col-sm-12
+            .float
               .project
                 .project_image
                   .img(style="background-image: url('img/colorchange.png')")
@@ -252,7 +255,8 @@ html(lang="zh-Hant-TW")
                     span Html / CSS
                     span SASS
                     span JavaScript
-            .col-4.col-md-6.col-sm-12
+            //- .col-4.col-md-6.col-sm-12
+            .float
               .project
                 .project_image
                   .img(style="background-image: url('img/plurkcssgenerator.png')")
@@ -267,7 +271,8 @@ html(lang="zh-Hant-TW")
                     span Html / CSS
                     span SASS
                     span JavaScript
-            .col-4.col-md-6.col-sm-12
+            //- .col-4.col-md-6.col-sm-12
+            .float
               .project
                 .project_image
                   .img(style="background-image: url('img/freespeech.png')")
@@ -280,7 +285,8 @@ html(lang="zh-Hant-TW")
                   ul.project_list
                     li 利用貪吃蛇的概念表達循序漸進的學習
                     li 蛇的花紋使用三角強調蛇的概念
-            .col-4.col-md-6.col-sm-12
+            //- .col-4.col-md-6.col-sm-12
+            .float
               .project
                 .project_image
                   .img(style="background-image: url('img/bleeze.png')")
@@ -292,7 +298,8 @@ html(lang="zh-Hant-TW")
                   h6 動漫同心圓
                   ul.project_list
                     li 利用 Float 切版
-            .col-4.col-md-6.col-sm-12
+            //- .col-4.col-md-6.col-sm-12
+            .float
               .project
                 .project_image
                   .img(style="background-image: url('img/oldwebsite.png')")
