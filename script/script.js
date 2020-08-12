@@ -12,15 +12,18 @@
   // nav button跳轉
   const blockList = ['#top', '#profile', '#resume', '#portfolio'];
   blockList.forEach(item => {
-    const navItem = document.querySelector(`[data-target="${item}"]`);
+    const navItem = document.querySelector(`[href="${item}"]`);
     const block = document.querySelector(item);
-    navItem.addEventListener('click', () => window.scrollTo(0, block.offsetTop - header.offsetHeight));
+    navItem.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo(0, block.offsetTop - header.offsetHeight);
+    });
   });
 
   // 隨卷軸移動讓 nav item 加上 active
   const navActive = () => {
     blockList.forEach(item => {
-      const navItem = document.querySelector(`[data-target="${item}"]`);
+      const navItem = document.querySelector(`[href="${item}"]`);
       const block = document.querySelector(item);
       const scrollDistance = window.scrollY + window.innerHeight / 3;
       const start = scrollDistance > block.offsetTop;
