@@ -104,6 +104,12 @@
   }
 }
 
+.exp_list {
+  & > li:nth-last-of-type(-n+2) {
+    display: none;
+  }
+}
+
 #portfolio .wrap {
   padding-left: 15px;
   padding-right: 30px;

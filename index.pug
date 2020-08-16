@@ -19,7 +19,7 @@ html(lang="zh-Hant-TW")
                 span
               ul
                 li
-                  a.nav_link.active(href="#top") Home
+                  a.nav_link.active(href="#top") Top
                 li
                   a.nav_link(href="#profile") About
                 li
@@ -63,11 +63,11 @@ html(lang="zh-Hant-TW")
                         | os88430@gmail.com
                     .profile_about 
                       ol
-                        li 熟悉 HTML、CSS、SASS、JavaScript、RWD 設計，可獨立切版完成網頁
-                        li 應用 SASS 規劃產出 RWD 網頁
-                        li 分析網站並做出輔助工具
-                        li 利用 JavaScript 做出遊戲並排除錯誤
-                        li 會使用簡易的git指令
+                        li 熟悉 HTML、CSS、Bootstrap 4、RWD 設計，可獨立切版完成網頁
+                        li 熟悉 SASS、Pug 等預處理器使工作速度提升
+                        li 熟悉 JavaScript、jQuery 
+                        li 能簡單使用 Ajax
+                        li 能簡單使用 git 指令
                       p 曾擔任多媒體編輯師，在工作之餘持續學習前端技術，對於 Web 抱有熱情與興趣。喜歡持續學習有趣的新知識，對所有事物都保持著開放的心態。
                       .profile_more.hide
                         h5 關於我
@@ -248,11 +248,12 @@ html(lang="zh-Hant-TW")
             //- .col-4.col-md-6.col-sm-12
             .float
               .project
-                .project_image
+                .project_image(data-style="link")
                   .img(style="background-image: url('img/colorchange.png')")
                   a.project_link(href="https://hoshikata.github.io/colorchange/" target="_blank")
                 .project_detail
                   h6 Color Change
+                  p 尋找不同色塊之遊戲，有倒數功能以及三次失敗機會，關卡無限多，並且具有儲存上次最佳高分的功能
                   ul.project_list
                     li 利用 JavaScript 做出遊戲並排除錯誤
                     li 簡易應用 JavaScript Prototype
@@ -264,15 +265,16 @@ html(lang="zh-Hant-TW")
             //- .col-4.col-md-6.col-sm-12
             .float
               .project
-                .project_image
+                .project_image(data-style="link")
                   .img(style="background-image: url('img/plurkcssgenerator.png')")
                   a.project_link(href="https://hoshikata.github.io/PlurkCSSGenerator/" target="_blank")
                 .project_detail
                   h6 Plurk CSS Generator
+                  p 自主獨立開發，輔助噗浪使用者變更佈景之工具，分析噗浪社群網站，規劃讓使用者調控的選項，讓使用者就算不具備 HTML / CSS 能力也能變更佈景
                   ul.project_list
-                    li 分析噗浪社群網站並做出輔助工具
                     li 應用 SASS 做出簡易的網格系統
                     li 實作簡易的 RWD 網站
+                    li 應用 JavaScript 抓取使用者輸入並回傳相應內容
                   p.project_tag 
                     span Html / CSS
                     span SASS
@@ -280,7 +282,7 @@ html(lang="zh-Hant-TW")
             //- .col-4.col-md-6.col-sm-12
             .float
               .project
-                .project_image
+                .project_image(data-style="image")
                   .img(style="background-image: url('img/freespeech.png')")
                   a.project_link.imageLink(href="javascript:;")
                   .imageLarge
@@ -289,8 +291,17 @@ html(lang="zh-Hant-TW")
                 .project_detail
                   h6 Free Speech
                   ul.project_list
-                    li 利用貪吃蛇的概念表達循序漸進的學習
-                    li 蛇的花紋使用三角強調蛇的概念
+                    p 利用貪吃蛇的概念表達循序漸進的學習，蛇身上的三角花紋更強調蛇的概念
+            //- .col-4.col-md-6.col-sm-12
+            .float
+              .project
+                .project_image(data-style="link")
+                  .img(style="background-image: url('img/boardgamerule.png')")
+                  a.project_link(href="https://drive.google.com/file/d/15JAyE0NDtlST1JWtMN9QT2cHURO6S9vN/view" target="_blank")
+                .project_detail
+                  h6 《叫我土豪》遊戲企劃規則
+                  ul.project_list
+                    p 策略桌遊，看看不同人格類型的玩家，對於表任務與裏任務的選擇相關性為如何？
             //- .col-4.col-md-6.col-sm-12
             //- .float
               .project

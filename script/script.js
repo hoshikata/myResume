@@ -111,4 +111,13 @@
     imageLargeClose.addEventListener('click', () => imageLarge.classList.remove('show'));
   };
   projectImageLink.forEach(link => link.addEventListener('click', showImageLarge));
+
+  // 作品集 Float 高度
+  const projectFloat = document.querySelectorAll('.float');
+  const floatHeight = [...projectFloat]
+    .map(box => box.offsetHeight)
+    .sort((prev, next) => next - prev);
+  projectFloat.forEach(box => {
+    box.style.height = floatHeight[0] + 'px';
+  });
 }
